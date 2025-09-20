@@ -1,0 +1,75 @@
+body {
+    font-family: sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.team-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+    width: 100%;
+    max-width: 900px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.team-names ul {
+    list-style: none;
+    padding: 0;
+}
+
+.team-names li {
+    font-size: 1.2em;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.team-names li:hover {
+    background-color: #e2e2e2;
+    border-radius: 5px;
+}
+
+.member-profile {
+    display: none; /* Initially hide the profile display */
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    width: 60%;
+    text-align: left;
+}
+
+/* This class will be added by JavaScript to show the profile */
+.member-profile.active {
+    display: flex;
+}
+
+.member-profile .profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Make it a circle */
+    background-color: #ccc; /* Placeholder color */
+}
+
+.member-profile .profile-details h3 {
+    margin-top: 0;
+}
+
+.member-profile .profile-details p {
+    margin: 5px 0;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: #0077b5; /* Example link color */
+    margin-right: 15px;
+}

@@ -1,12 +1,20 @@
 body {
-    font-family: sans-serif;
-    background-color: #f4f4f9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #F4F4F9;
     color: #333;
     margin: 0;
     padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+header {
+    margin-bottom: 30px;
+}
+
+h1 {
+    color: #1a4314; /* A deep green for the heading */
 }
 
 .team-container {
@@ -22,6 +30,16 @@ body {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
+.team-names {
+    width: 30%;
+}
+
+.team-names h2 {
+    color: #1a4314;
+    border-bottom: 2px solid #D4AF37; /* Gold border */
+    padding-bottom: 5px;
+}
+
 .team-names ul {
     list-style: none;
     padding: 0;
@@ -31,12 +49,18 @@ body {
     font-size: 1.2em;
     padding: 10px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    border-radius: 5px;
+    color: #1a4314;
 }
 
 .team-names li:hover {
     background-color: #e2e2e2;
-    border-radius: 5px;
+}
+
+.team-names li.active-name {
+    font-weight: bold;
+    color: #D4AF37; /* Gold color for the active name */
 }
 
 .member-profile {
@@ -46,30 +70,41 @@ body {
     gap: 20px;
     width: 60%;
     text-align: left;
+    opacity: 0; /* Initial state for fade-in animation */
+    transition: opacity 0.5s ease-in-out;
 }
 
 /* This class will be added by JavaScript to show the profile */
 .member-profile.active {
     display: flex;
+    opacity: 1; /* Final state for fade-in animation */
 }
 
-.member-profile .profile-photo {
+.profile-photo-placeholder {
     width: 150px;
     height: 150px;
     border-radius: 50%; /* Make it a circle */
+    border: 3px solid #D4AF37; /* Gold border */
     background-color: #ccc; /* Placeholder color */
 }
 
-.member-profile .profile-details h3 {
+.profile-details h3 {
+    color: #333;
     margin-top: 0;
 }
 
-.member-profile .profile-details p {
+.profile-details p {
     margin: 5px 0;
 }
 
 .social-links a {
     text-decoration: none;
-    color: #0077b5; /* Example link color */
+    color: #D4AF37; /* Gold color for social links */
     margin-right: 15px;
+    font-size: 1.5em;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #1a4314;
 }
